@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Building cross-platform apps with Ionic 2</title>
+
+  <meta name="description" content="The Ionic and Angular teams have been working in parallel to extend Ionic’s performance in even more exciting ways than previous versions. We’ll review the new features of Ionic 2 and walk through the process of building a practical and highly performant app, using a single codebase for multiple platforms.">
+  <meta name="author" content="Adam Bradley">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/ionic.css" id="theme">
+  <link rel="stylesheet" href="lib/css/oceanicnext.css">
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+  <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      <section>
+        <img src="img/ionic-sdk-landscape-white-1024.png" class="logo" width="450" style="display:block; margin:auto; margin-bottom:80px;">
+        <h1 style="font-size:56px">Building cross-platform apps with Ionic 2</h1>
+        <p>Adam Bradley | <a href="https://twitter.com/adamdbradley">@adamdbradley</a></p>
+      </section>
+
+      <section>
+        <h3 style="font-size:80px;">Ionic!</h3>
+        <p>SDK for Developing Hybrid Apps</p>
+        <p>Focused on mobile first</p>
+        <p>Sass for easy customization</p>
+        <p>Angular for code structure *</p>
+      </section>
+
+      <section>
+        <h3>Ionic's Stats</h3>
+        <p>Top 40 most popular OSS project (~20,000 stars on GitHub)</p>
+        <p>Over ONE MILLION apps built with Ionic</p>
+        <p>Amazing community</p>
+        <p>Ionic apps top app store charts</p>
+        <p>Used everywhere from
+          <br>Fortune 50 co’s to YC/TechStars companies</p>
+      </section>
+
+      <section>
+        <h3>Ionic v1 is great</h3>
+        <p>But a lot's changed since its release</p>
+      </section>
+
+      <section>
+        <h3>v1 was built for</h3>
+        <p>iOS 6</p>
+        <p>Android 4.0 - 4.3</p>
+      </section>
+
+      <section>
+        <h3>A lot's changed since then</h3>
+        <p>Better/faster devices!</p>
+        <p>Fewer slow/bad devices!</p>
+        <p>Improved and faster browser engines!</p>
+        <p>Newer and widely available browser APIs!</p>
+      </section>
+
+      <section>
+        <h3>Ionic 2</h3>
+        <p>Same powerful framework</p>
+        <p>With lessons learned from v1</p>
+        <p>Amazing performance from Angular2</p>
+      </section>
+
+      <section>
+        <h3>Goals to improve from v1</h3>
+        <p>Platform Continuity</p>
+        <p>Performance</p>
+        <p>Simplicity</p>
+        <p>Creative Freedom</p>
+        <p>Code once</p>
+      </section>
+
+      <section>
+        <h3>Platform Continuity</h3>
+        <p>v1 changed <em>some</em> components based on platform</p>
+        <p>v2 built from the ground up to support multiple UI designs</p>
+      </section>
+
+      <section>
+        <h3>UI Designs</h3>
+        <p>iOS</p>
+        <p>Material Design</p>
+        <p>Same HTML and JS</p>
+        <p>More than just different CSS</p>
+      </section>
+
+      <section>
+        <h3>[ios/md demo]</h3>
+        <p>tabs, menu, actionsheet, popup, toggles, buttons, icons</p>
+      </section>
+
+      <section>
+        <h3>Simplicity</h3>
+        <p>Core CSS uses elements and attributes</p>
+        <p>Cleaner slate for customization</p>
+        <p>Less clutter, and just as customizable</p>
+        <p>Doesn't change how YOU write your styles</p>
+      </section>
+
+      <section>
+        <h3>Buttons</h3>
+        <div class="flex">
+          <div class="code-left" style="margin-top:60px;">
+            <pre><code class="html">
+    &lt;button&gt;Default&lt;/button&gt;
+    &lt;button secondary&gt;Secondary&lt;/button&gt;
+    &lt;button danger&gt;Danger&lt;/button&gt;
+    &lt;button light&gt;Light&lt;/button&gt;
+    &lt;button dark&gt;Dark&lt;/button&gt;
+            </code></pre>
+          </div>
+          <div class="demo">
+
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Icons</h3>
+        <p>Svgs</p>
+        <p>every icon has an ios md version</p>
+        <p>[DEMO]</p>
+      </section>
+
+      <section>
+        <h3>Action Sheet</h3>
+        <div class="flex">
+          <div class="code-left">
+            <pre><code class="javascript">
+this.actionSheet.open({
+  buttons: [
+    {text: 'Share This'},
+    {text: 'Move'}],
+  destructiveText: 'Delete',
+  titleText: 'Modify your album',
+  cancelText: 'Cancel'
+});
+
+            </code></pre>
+          </div>
+          <div class="demo">
+
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>SideMenu</h3>
+        <div class="flex">
+          <div class="code-left">
+            <p>iOS: reveal underneath the content</p>
+            <p>MD: overlay on top of the content</p>
+            <p>Highly configurable</p>
+          </div>
+          <div class="demo">
+
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Navigation</h3>
+        <div class="flex">
+          <div class="code-left">
+            <p>More than just different animations</p>
+            <p>Built using Web Animations API</p>
+            <p>Easy to change and add new animations</p>
+          </div>
+          <div class="demo">
+
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>All highly configurable</h3>
+        <p>Many new configuration options</p>
+        <p>Much easier to change the design</p>
+      </section>
+
+      <section>
+        <h3>Navigation</h3>
+        <p>More robust and powerful</p>
+        <p>v1's routing was tightly coupled to URLs</p>
+        <p>Uses UI-Router, which didn’t give full control</p>
+        <p>For v2, we needed to rethink navigation</p>
+      </section>
+
+      <section>
+        <h3>v1 didn't give enough flexibility</h3>
+        <p>Navigation is more about a user experience</p>
+        <p>Traditional/linear browser-based URLs don't offer that</p>
+        <p>Developers <strong>NEED</strong> to be in complete control</p>
+      </section>
+
+      <section>
+        <h3>Push/Pop Navigation</h3>
+        <pre data-trim><code class="javascript">
+import SecondPage from '../secondpage';
+export class FirstPage {
+  constructor(nav: NavController) {
+    this.nav = nav
+  };
+  pushState() {
+    this.nav.push(SecondPage)
+  };
+};
+</code></pre>
+      </section>
+
+      <section>
+        <h3>Navigation Recap</h3>
+        <p>Navigation is not tied to URL</p>
+        <p>More control over the navigation experience</p>
+        <p>More powerful and flexible than v1</p>
+      </section>
+
+      <section>
+        <h3>Sass</h3>
+        <p>Sass is enabled by default</p>
+        <p>Apps should fit their brand first</p>
+        <p>Easier to add/remove custom colors</p>
+        <p>Providing numerous Ionic themes</p>
+        <p>Build tools already included</p>
+      </section>
+
+      <section>
+        <h3>Base Colors are defined in a map</h3>
+        <pre><code class="stylus">
+$colors: (
+  primary:    #387ef5,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222222,
+);
+        </code></pre>
+        <p>Easily add, remove, update or rename colors</p>
+      </section>
+
+      <section>
+        <h3>Design for your brand</h3>
+        <pre><code class="stylus">
+$colors: (
+  primary:     #387ef5,
+  my-brand:    #ead351
+);
+        </code></pre>
+        <p>Will only generate CSS for <code>primary</code> and <code>my-brand</code></p>
+        <p>Slims down your CSS, giving you only what you need</p>
+        <p>Makes customization even easier</p>
+      </section>
+
+      <section>
+        <h3>Animations</h3>
+        <p>v1 animations were a mix of CSS and JS</p>
+        <p>CSS animations can be quite limiting</p>
+        <p>Difficult to interact with</p>
+      </section>
+
+      <section>
+        <h3>Web Animations API</h3>
+        <p>Power of CSS performance</p>
+        <p>Flexibility of JavaScript</p>
+        <p>W3C Spec: Editors Draft</p>
+        <p><a href="https://w3c.github.io/web-animations/">w3c.github.io/web-animations</a></p>
+      </section>
+
+      <section>
+        <h3>v2 Animations</h3>
+        <p>Web Animations API</p>
+        <p>Easy to customize</p>
+        <p>Friendly CSS syntax</p>
+        <p>Interactive control</p>
+        <p>[DEMO IOS TRANSITION]</p>
+        <p>stats about how many elements, animations, css properties animating</p>
+      </section>
+
+      <section>
+        <blockquote>
+          CSS friendly syntax, but adds the options of variables, controls, and finish callbacks
+        </blockquote>
+      </section>
+
+      <section>
+        <p>Baked into Chrome natively</p>
+        <p>Great performance on Android</p>
+        <p>Polyfill for iOS offers the same great performance</p>
+      </section>
+
+      <section>
+        <h3></h3>
+        <p>Ionic v1 was built with ES5</p>
+        <p>Ionic v2 has been Built with the latest standards</p>
+        <p>ES6 brings many new features</p>
+      </section>
+
+      <section>
+        <h3>A Few Benefits of ES6</h3>
+        <p>Modular: Import what you need and gets rid of globals</p>
+        <p>Arrow Functions: A `this` context that makes sense</p>
+        <p>Scoping: <code>let</code> defines a block-scoped variable</p>
+        <p>Promises: Built into the language natively</p>
+        <p>Classes: Simpler syntax for building objects</p>
+      </section>
+
+      <section>
+        <h3>TypeScript</h3>
+        <p>ES6 + ES7 Decorators + Types</p>
+        <p>Ionic 2 and NG2 built using TS</p>
+        <p>Code completion in your editor</p>
+      </section>
+
+      <section>
+        <h3>Ionic CLI</h3>
+        <p>Ready to go</p>
+        <p>ES6/Typescript Transpilation</p>
+        <p>Sass compiling</p>
+        <p>Cordova builds</p>
+        <p>Webpack bundling</p>
+      </section>
+
+      <section>
+        <h3>Native Plugins</h3>
+        <p>Made it even easier to get native access</p>
+        <p>Many plugins built right into Ionic</p>
+        <!--
+        we realized w v1 to really make a great app you'll need native features under the hood
+        we had ngcordova to make it easier
+        now we're bring it into ionic 2
+        comes with batteries included, but in a way that also works in a web browser or cordova
+        <p></p>-->
+      </section>
+
+      <section>
+        <h3>Want to try it out now?</h3>
+        <p>We want you're feedback</p>
+        <p><code><a href="http://ionicframework.com/docs/v2/">ionicframework.com/docs/v2</a></code></p>
+      </section>
+
+      <section>
+        <h3>What's Next!</h3>
+        <p>Releasing alpha today</p>
+        <p>Staying in sync with Angular2's release</p>
+        <p>More native features</p>
+        <p>Windows Phone support</p>
+      </section>
+
+      <section>
+        <h3>Huge Community!</h3>
+        <p># of forum its</p>
+        <p>105 Ionic Meetup Groups around the world</p>
+        <p># of contributors</p>
+        <p>Over 3000 in our Slack channel</p>
+      </section>
+
+      <section>
+        <h3>We love the web platform</h3>
+        <p>Ionic 2 is what </p>
+        <p>105 Ionic Meetup Groups around the world</p>
+        <p># of contributors</p>
+        <p>Over 3000 in our Slack channel</p>
+      </section>
+
+      <section>
+        <h3>Thank you!</h3>
+        <h3><code style="font-size: 80px">&lt;/html&gt;</code></h3>
+        <a href="https://twitter.com/adamdbradley" target="_blank">@adamdbradley</a>
+      </section>
+
+    </div>
+
+  </div>
+
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+  <script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+
+      transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+      // Optional reveal.js plugins
+      dependencies: [{
+        src: 'plugin/markdown/marked.js',
+        condition: function() {
+          return !!document.querySelector('[data-markdown]');
+        }
+      }, {
+        src: 'plugin/markdown/markdown.js',
+        condition: function() {
+          return !!document.querySelector('[data-markdown]');
+        }
+      }, {
+        src: 'plugin/highlight/highlight.js',
+        async: true,
+        condition: function() {
+          return !!document.querySelector('pre code');
+        },
+        callback: function() {
+          hljs.initHighlightingOnLoad();
+        }
+      }]
+    });
+  </script>
+
+</body>
+
+</html>
