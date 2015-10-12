@@ -1,3 +1,5 @@
-# Ionic v2 and Beyond
+# Building cross-platform apps with Ionic 2
 
-[![](http://img.youtube.com/vi/qDJgqcNF4Z0/0.jpg)](http://www.youtube.com/watch?v=qDJgqcNF4Z0)
+The Ionic and Angular teams have been working in parallel to extend Ionic’s performance in even more exciting ways than previous versions. We’ll review the new features of Ionic 2 and walk through the process of building a practical and highly performant app, using a single codebase for multiple platforms.
+
+http://angularconnect.com/
