@@ -352,7 +352,8 @@ body {
     text-decoration: none;
     transition: color 0.15s ease; }
   .reveal [text-left] {
-    text-align: left; }
+    text-align: left;
+    padding-left: 40px; }
   .reveal [vertically-center] {
     display: flex;
     align-items: center; }
@@ -360,3 +361,15 @@ body {
     display: flex; }
   .reveal [col] {
     flex: 1; }
+  .reveal .mode-demo [col] {
+    align-items: center;
+    display: flex;
+    flex-direction: column; }
+  .reveal .mode-demo .demo-ios {
+    background: red;
+    width: 300px;
+    height: 400px; }
+  .reveal .mode-demo .demo-md {
+    background: blue;
+    width: 300px;
+    height: 400px; }

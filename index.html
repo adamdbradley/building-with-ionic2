@@ -45,11 +45,11 @@
           position: absolute;
           width: 100%;
           height: 100%;
-          opacity: 0.2;"></div>
+          opacity: 0.2; z-index: -1;"></div>
         <h3 style="font-size:80px;">Ionic!</h3>
         <p>SDK for Developing Hybrid Apps</p>
         <p>Focused on mobile first</p>
-        <p>Sass for easy customization</p>
+        <p>Easy customization</p>
         <p>Angular for code structure *</p>
       </section>
 
@@ -66,7 +66,7 @@
       <section>
         <div flex>
           <div col text-left vertically-center>
-            <div style="padding-left: 50px;">
+            <div>
               <h4>Ionic v1 is great</h4>
               <p>But a lot has changed</p>
               <p>Built during iOS 6</p>
@@ -88,6 +88,12 @@
       </section>
 
       <section>
+        <div style="
+          background: url(img/ionic2.png) no-repeat center center;
+          background-size: 400px 280px;
+          position: absolute;
+          width: 100%;
+          height: 100%; z-index: -1;"></div>
         <h3>Ionic 2</h3>
         <p>Same powerful framework</p>
         <p>With lessons learned from v1</p>
@@ -111,32 +117,43 @@
         <p>More than just different CSS</p>
       </section>
 
-      <section>
-
-      </section>
-
-      <section>
-        <h3>Simplicity</h3>
-        <p>Component Model: Elements and attributes</p>
-        <p>Cleaner slate for customization</p>
-        <p>Less clutter, and just as customizable</p>
-        <p>Doesn't change how YOU write your CSS</p>
-      </section>
-
-      <section>
-        <h3>Buttons</h3>
-        <div class="flex">
-          <div class="code-left" style="margin-top:60px;">
-            <pre><code class="html">
-    &lt;button&gt;Default&lt;/button&gt;
-    &lt;button secondary&gt;Secondary&lt;/button&gt;
-    &lt;button danger&gt;Danger&lt;/button&gt;
-    &lt;button light&gt;Light&lt;/button&gt;
-    &lt;button dark&gt;Dark&lt;/button&gt;
-            </code></pre>
+      <section class="mode-demo">
+        <div flex>
+          <div col>
+            <div class="demo demo-ios" id="mode-ios">
+              ios
+            </div>
           </div>
-          <div class="demo">
+          <div col>
+            <div class="demo demo-md" id="mode-md">
+              android
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <section>
+        <div flex>
+          <div col text-left>
+            <h3>Simplicity</h3>
+            <p>Component Model</p>
+            <p>Elements and attributes</p>
+            <p>Cleaner slate for customization</p>
+            <p>Less clutter</p>
+          </div>
+          <div col>
+            <pre><code class="html">&lt;button&gt;...&lt;/button&gt;
+
+&lt;button danger&gt;...&lt;/button&gt;
+
+&lt;icon star&gt;&lt;/icon&gt;
+
+&lt;ion-checkbox&gt;...&lt;/ion-checkbox&gt;
+
+&lt;ion-list&gt;
+  &lt;ion-item&gt;...&lt;/ion-item&gt;
+  &lt;ion-item&gt;...&lt;/ion-item&gt;
+&lt;/ion-list&gt;</code></pre>
           </div>
         </div>
       </section>
@@ -146,28 +163,6 @@
         <p>Svgs</p>
         <p>every icon has an ios md version</p>
         <p>[DEMO]</p>
-      </section>
-
-      <section>
-        <h3>Action Sheet</h3>
-        <div class="flex">
-          <div class="code-left">
-            <pre><code class="javascript">
-this.actionSheet.open({
-  buttons: [
-    {text: 'Share This'},
-    {text: 'Move'}],
-  destructiveText: 'Delete',
-  titleText: 'Modify your album',
-  cancelText: 'Cancel'
-});
-
-            </code></pre>
-          </div>
-          <div class="demo">
-
-          </div>
-        </div>
       </section>
 
       <section>
@@ -185,60 +180,25 @@ this.actionSheet.open({
       </section>
 
       <section>
-        <h3>Navigation</h3>
-        <div class="flex">
-          <div class="code-left">
-            <p>More than just different animations</p>
-            <p>Built using Web Animations API</p>
-            <p>Easy to change and add new animations</p>
-          </div>
-          <div class="demo">
-
-          </div>
-        </div>
-      </section>
-
-      <section>
         <h3>All highly configurable</h3>
         <p>Many new configuration options</p>
         <p>Much easier to change the design</p>
       </section>
 
       <section>
-        <h3>Navigation</h3>
-        <p>More robust and powerful</p>
-        <p>v1's routing was tightly coupled to URLs</p>
-        <p>Uses UI-Router, which didn’t give full control</p>
-        <p>For v2, we needed to rethink navigation</p>
-      </section>
-
-      <section>
-        <h3>v1 didn't give enough flexibility</h3>
-        <p>Navigation is more about a user experience</p>
-        <p>Traditional/linear browser-based URLs don't offer that</p>
+        <h3>V1 Navigation:</h3>
+        <p>UI-Router: challenge to have full control</p>
+        <p>Traditional URL based history makes this difficult</p>
         <p>Developers <strong>NEED</strong> to be in complete control</p>
+        <p>For v2, we needed to rethink navigation</p>
+        <p>v1's routing was tightly coupled to URLs</p>
       </section>
 
       <section>
         <h3>Push/Pop Navigation</h3>
-        <pre data-trim><code class="javascript">
-import SecondPage from '../secondpage';
-export class FirstPage {
-  constructor(nav: NavController) {
-    this.nav = nav
-  };
-  pushState() {
-    this.nav.push(SecondPage)
-  };
-};
-</code></pre>
-      </section>
-
-      <section>
-        <h3>Navigation Recap</h3>
-        <p>Navigation is not tied to URL</p>
+        <p>Similar to iOS/Android navigation</p>
+        <p>More robust and powerful</p>
         <p>More control over the navigation experience</p>
-        <p>More powerful and flexible than v1</p>
       </section>
 
       <section>
@@ -298,6 +258,7 @@ $colors: (
         <p>Easy to customize</p>
         <p>Friendly CSS syntax</p>
         <p>Interactive control</p>
+        <p>Easy to change and add new animations</p>
         <p>[DEMO IOS TRANSITION]</p>
         <p>stats about how many elements, animations, css properties animating</p>
       </section>
@@ -377,14 +338,6 @@ $colors: (
       </section>
 
       <section>
-        <h3>We love the web platform</h3>
-        <p>Ionic 2 is what </p>
-        <p>105 Ionic Meetup Groups around the world</p>
-        <p># of contributors</p>
-        <p>Over 3000 in our Slack channel</p>
-      </section>
-
-      <section>
         <h3>Thank you!</h3>
         <h3><code style="font-size: 80px">&lt;/html&gt;</code></h3>
         <a href="https://twitter.com/adamdbradley" target="_blank">@adamdbradley</a>
@@ -401,6 +354,9 @@ $colors: (
     // Full list of configuration options available at:
     // https://github.com/hakimel/reveal.js#configuration
     Reveal.initialize({
+      maxScale: 1,
+      minScale: 1,
+
       controls: true,
       progress: true,
       history: true,
