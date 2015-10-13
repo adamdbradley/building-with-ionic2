@@ -1,8 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
 @font-face {
   font-family: 'League Gothic';
-  src: url('../../lib/font/league_gothic-webfont.eot');
-  src: url('../../lib/font/league_gothic-webfont.eot?#iefix') format('embedded-opentype'), url('../../lib/font/league_gothic-webfont.woff') format('woff'), url('../../lib/font/league_gothic-webfont.ttf') format('truetype'), url('../../lib/font/league_gothic-webfont.svg#LeagueGothicRegular') format('svg');
+  src: url("../../lib/font/league_gothic-webfont.eot");
+  src: url("../../lib/font/league_gothic-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/league_gothic-webfont.woff") format("woff"), url("../../lib/font/league_gothic-webfont.ttf") format("truetype"), url("../../lib/font/league_gothic-webfont.svg#LeagueGothicRegular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -20,7 +20,7 @@ body {
   background-color: #313744; }
 
 .reveal {
-  font-family: 'Avenir Next', san-serif;
+  font-family: "Avenir Next", san-serif;
   font-size: 32px;
   font-weight: normal;
   color: #fff; }
@@ -30,17 +30,23 @@ body {
   background: white;
   text-shadow: none; }
 
-.reveal .slides > section, .reveal .slides > section > section {
+.reveal .slides > section,
+.reveal .slides > section > section {
   line-height: 1.3;
   font-weight: inherit; }
 
 /*********************************************
  * HEADERS
  *********************************************/
-.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
   margin: 0 0 20px 0;
   color: #fff;
-  font-family: 'Avenir Next', san-serif;
+  font-family: "Avenir Next", san-serif;
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: 1px;
@@ -71,17 +77,22 @@ body {
   line-height: 1.3; }
 
 /* Ensure certain elements are never larger than the slide itself */
-.reveal img, .reveal video, .reveal iframe {
+.reveal img,
+.reveal video,
+.reveal iframe {
   max-width: 95%;
   max-height: 95%; }
 
-.reveal strong, .reveal b {
+.reveal strong,
+.reveal b {
   font-weight: bold; }
 
 .reveal em {
   font-style: italic; }
 
-.reveal ol, .reveal dl, .reveal ul {
+.reveal ol,
+.reveal dl,
+.reveal ul {
   display: inline-block;
   text-align: left;
   margin: 0 0 0 1em; }
@@ -98,7 +109,10 @@ body {
 .reveal ul ul ul {
   list-style-type: circle; }
 
-.reveal ul ul, .reveal ul ol, .reveal ol ol, .reveal ol ul {
+.reveal ul ul,
+.reveal ul ol,
+.reveal ol ol,
+.reveal ol ul {
   display: block;
   margin-left: 40px; }
 
@@ -108,7 +122,8 @@ body {
 .reveal dd {
   margin-left: 40px; }
 
-.reveal q, .reveal blockquote {
+.reveal q,
+.reveal blockquote {
   quotes: none; }
 
 .reveal blockquote {
@@ -121,7 +136,8 @@ body {
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
 
-.reveal blockquote p:first-child, .reveal blockquote p:last-child {
+.reveal blockquote p:first-child,
+.reveal blockquote p:last-child {
   display: inline-block; }
 
 .reveal q {
@@ -159,15 +175,18 @@ body {
 .reveal table th {
   font-weight: bold; }
 
-.reveal table th, .reveal table td {
+.reveal table th,
+.reveal table td {
   text-align: left;
   padding: 0.2em 0.5em 0.2em 0.5em;
   border-bottom: 1px solid; }
 
-.reveal table th[align="center"], .reveal table td[align="center"] {
+.reveal table th[align="center"],
+.reveal table td[align="center"] {
   text-align: center; }
 
-.reveal table th[align="right"], .reveal table td[align="right"] {
+.reveal table th[align="right"],
+.reveal table td[align="right"] {
   text-align: right; }
 
 .reveal table tr:last-child td {
@@ -229,16 +248,20 @@ body {
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
-.reveal .controls div.navigate-left, .reveal .controls div.navigate-left.enabled {
+.reveal .controls div.navigate-left,
+.reveal .controls div.navigate-left.enabled {
   border-right-color: white; }
 
-.reveal .controls div.navigate-right, .reveal .controls div.navigate-right.enabled {
+.reveal .controls div.navigate-right,
+.reveal .controls div.navigate-right.enabled {
   border-left-color: white; }
 
-.reveal .controls div.navigate-up, .reveal .controls div.navigate-up.enabled {
+.reveal .controls div.navigate-up,
+.reveal .controls div.navigate-up.enabled {
   border-bottom-color: white; }
 
-.reveal .controls div.navigate-down, .reveal .controls div.navigate-down.enabled {
+.reveal .controls div.navigate-down,
+.reveal .controls div.navigate-down.enabled {
   border-top-color: white; }
 
 .reveal .controls div.navigate-left.enabled:hover {
@@ -292,19 +315,9 @@ body {
     font-style: italic;
     background: transparent;
     box-shadow: none; }
-  .reveal table td, .reveal table th {
-    border: 0;
-    background: rgba(0, 0, 0, 0.15); }
-  .reveal table th {
-    text-transform: uppercase;
-    background: rgba(0, 0, 0, 0.4); }
   .reveal a {
     color: inherit;
     text-decoration: underline; }
-  .reveal .dark-shadow {
-    text-shadow: 5px 0 10px black; }
-  .reveal .left {
-    text-align: left; }
   .reveal .me {
     margin: 30px 0 0 130px;
     font-size: 1.2em;
@@ -324,32 +337,10 @@ body {
     .reveal .stack li {
       margin: 8px;
       padding: 5px 6px 7px 12px; }
-  .reveal .ionic-blue, .reveal .ionic-blue * {
+  .reveal .ionic-blue,
+  .reveal .ionic-blue * {
     text-shadow: none;
     color: #313744; }
-  .reveal .col {
-    float: left;
-    width: 50%; }
-  .reveal .col.preview {
-    width: 35%; }
-  .reveal .col.code {
-    width: 65%;
-    text-align: left; }
-  .reveal .col.code > * {
-    margin-left: 40px; }
-  .reveal .demo-frame {
-    background: url('../img/demo-bg.png') no-repeat;
-    background-size: 340px;
-    height: 700px;
-    margin-top: 0;
-    margin-left: -15px;
-    min-width: 345px; }
-  .reveal .demo-frame iframe {
-    position: absolute;
-    left: 7px;
-    top: 98px;
-    width: 296px;
-    height: 527px; }
   .reveal pre code {
     background-color: #1B2B34; }
   .reveal .headshot {
@@ -360,55 +351,12 @@ body {
     color: white;
     text-decoration: none;
     transition: color 0.15s ease; }
-  .reveal a:not(.icon)::after {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: #fff;
-    content: '';
-    opacity: 0;
-    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-    -moz-transition: opacity 0.3s, -moz-transform 0.3s;
-    transition: opacity 0.3s, transform 0.3s;
-    -webkit-transform: translateY(10px);
-    -moz-transform: translateY(10px);
-    transform: translateY(10px); }
-  .reveal a:not(.icon):hover::after, .reveal a:not(.icon):focus::after {
-    opacity: 0.5;
-    -webkit-transform: translateY(0px);
-    -moz-transform: translateY(0px);
-    transform: translateY(0px); }
-  .reveal .icon {
-    -webkit-transition: all 0.5s ease-out !important;
-    -moz-transition: all 0.5s ease-out !important;
-    -ms-transition: all 0.5s ease-out !important;
-    -o-transition: all 0.5s ease-out !important;
-    transition: all 0.5s ease-out !important;
-    opacity: 0.5; }
-  .reveal .icon:hover {
-    opacity: 1; }
-  .reveal .blur {
-    background-color: rgba(0, 0, 0, 0.3); }
-    .reveal .blur p {
-      text-shadow: -2px 2px 0 #000;
-      font-weight: bold; }
-  .reveal .demo {
-    margin-left: 15px; }
-    .reveal .demo iframe {
-      width: 328px;
-      height: 568px;
-      border: none;
-      border: 4px solid #555;
-      background: white; }
-  .reveal .button {
-    background-color: white;
-    border: none; }
-  .reveal .code-left {
-    width: 60%;
+  .reveal [text-left] {
     text-align: left; }
-  .reveal .flex {
-    display: -ms-flexbox;
-    display: -webkit-flex;
+  .reveal [vertically-center] {
+    display: flex;
+    align-items: center; }
+  .reveal [flex] {
     display: flex; }
+  .reveal [col] {
+    flex: 1; }

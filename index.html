@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/reveal.css">
   <link rel="stylesheet" href="css/theme/ionic.css" id="theme">
   <link rel="stylesheet" href="lib/css/oceanicnext.css">
+  <link rel="icon" type="image/png" href="favicon.icon">
   <script>
     var link = document.createElement('link');
     link.rel = 'stylesheet';
@@ -25,12 +26,10 @@
     <script src="lib/js/html5shiv.js"></script>
     <![endif]-->
 </head>
-
 <body>
 
   <div class="reveal">
 
-    <!-- Any section element inside of this container is displayed as a slide -->
     <div class="slides">
 
       <section>
@@ -40,6 +39,13 @@
       </section>
 
       <section>
+        <div style="
+          background: url(img/ionic-logo.png) no-repeat center center;
+          background-size: 390px 390px;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          opacity: 0.2;"></div>
         <h3 style="font-size:80px;">Ionic!</h3>
         <p>SDK for Developing Hybrid Apps</p>
         <p>Focused on mobile first</p>
@@ -58,14 +64,19 @@
       </section>
 
       <section>
-        <h3>Ionic v1 is great</h3>
-        <p>But a lot's changed since its release</p>
-      </section>
-
-      <section>
-        <h3>v1 was built for</h3>
-        <p>iOS 6</p>
-        <p>Android 4.0 - 4.3</p>
+        <div flex>
+          <div col text-left vertically-center>
+            <div style="padding-left: 50px;">
+              <h4>Ionic v1 is great</h4>
+              <p>But a lot has changed</p>
+              <p>Built during iOS 6</p>
+              <p>Android 4.0 - 4.3</p>
+            </div>
+          </div>
+          <div col>
+            <img src="img/v1-devices.png">
+          </div>
+        </div>
       </section>
 
       <section>
@@ -94,12 +105,6 @@
 
       <section>
         <h3>Platform Continuity</h3>
-        <p>v1 changed <em>some</em> components based on platform</p>
-        <p>v2 built from the ground up to support multiple UI designs</p>
-      </section>
-
-      <section>
-        <h3>UI Designs</h3>
         <p>iOS</p>
         <p>Material Design</p>
         <p>Same HTML and JS</p>
@@ -107,16 +112,15 @@
       </section>
 
       <section>
-        <h3>[ios/md demo]</h3>
-        <p>tabs, menu, actionsheet, popup, toggles, buttons, icons</p>
+
       </section>
 
       <section>
         <h3>Simplicity</h3>
-        <p>Core CSS uses elements and attributes</p>
+        <p>Component Model: Elements and attributes</p>
         <p>Cleaner slate for customization</p>
         <p>Less clutter, and just as customizable</p>
-        <p>Doesn't change how YOU write your styles</p>
+        <p>Doesn't change how YOU write your CSS</p>
       </section>
 
       <section>
@@ -344,14 +348,10 @@ $colors: (
 
       <section>
         <h3>Native Plugins</h3>
+        <p>Batteries included</p>
+        <p>We're bring it straight into Ionic</p>
         <p>Made it even easier to get native access</p>
-        <p>Many plugins built right into Ionic</p>
-        <!--
-        we realized w v1 to really make a great app you'll need native features under the hood
-        we had ngcordova to make it easier
-        now we're bring it into ionic 2
-        comes with batteries included, but in a way that also works in a web browser or cordova
-        <p></p>-->
+        <p>Built to work with both Cordova and browsers</p>
       </section>
 
       <section>
