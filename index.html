@@ -49,7 +49,7 @@
         <h3 style="font-size:80px;">Ionic!</h3>
         <p>SDK for Developing Hybrid Apps</p>
         <p>Focused on mobile first</p>
-        <p>Easy customization</p>
+        <p>Easily customized</p>
         <p>Angular for code structure *</p>
       </section>
 
@@ -76,8 +76,8 @@
         <h3>A lot's changed since then</h3>
         <p>Better/faster devices!</p>
         <p>Fewer slow/bad devices!</p>
-        <p>Improved and faster browser engines!</p>
-        <p>Newer and widely available browser APIs!</p>
+        <p>Improved browser engines!</p>
+        <p>Widely available browser APIs!</p>
       </section>
 
       <section>
@@ -95,34 +95,11 @@
 
       <section>
         <h3>Goals to improve from v1</h3>
+        <p>Simplicity</p>
         <p>Platform Continuity</p>
         <p>Performance</p>
-        <p>Simplicity</p>
         <p>Creative Freedom</p>
         <p>Code once</p>
-      </section>
-
-      <section>
-        <h3>Platform Continuity</h3>
-        <p>iOS</p>
-        <p>Material Design</p>
-        <p>Same HTML and JS</p>
-        <p>More than just different CSS</p>
-      </section>
-
-      <section class="mode-demo">
-        <div flex>
-          <div col>
-            <div class="demo demo-ios" id="mode-ios">
-              ios
-            </div>
-          </div>
-          <div col>
-            <div class="demo demo-md" id="mode-md">
-              android
-            </div>
-          </div>
-        </div>
       </section>
 
       <section>
@@ -139,8 +116,6 @@
 
 &lt;button danger&gt;...&lt;/button&gt;
 
-&lt;icon star&gt;&lt;/icon&gt;
-
 &lt;ion-checkbox&gt;...&lt;/ion-checkbox&gt;
 
 &lt;ion-list&gt;
@@ -152,46 +127,59 @@
       </section>
 
       <section>
-        <h3>Icons</h3>
-        <p>Svgs</p>
-        <p>every icon has an ios md version</p>
-        <p>[DEMO]</p>
+        <h3>Platform Continuity</h3>
+        <p>iOS</p>
+        <p>Material Design</p>
+        <p>Same HTML and JS</p>
+        <p>More than just different CSS</p>
       </section>
 
-      <section>
-        <h3>SideMenu</h3>
-        <div class="flex">
-          <div class="code-left">
-            <p>iOS: reveal underneath the content</p>
-            <p>MD: overlay on top of the content</p>
-            <p>Highly configurable</p>
+      <!-- <section class="mode-demo">
+        <div flex>
+          <div col>
+            <div class="demo demo-ios" id="mode-ios">
+              ios
+            </div>
           </div>
-          <div class="demo">
+          <div col>
+            <div class="demo demo-md" id="mode-md">
+              android
+            </div>
+          </div>
+        </div>
+      </section> -->
 
+      <section>
+        <div flex>
+          <div col text-left>
+            <h3>Icons</h3>
+            <p>SVGs</p>
+            <p>iOS version</p>
+            <p>Material Design version</p>
+          </div>
+          <div col>
+            <pre><code class="html">&lt;icon home&gt;&lt;/icon&gt;
+
+&lt;icon star&gt;&lt;/icon&gt;
+
+&lt;icon share&gt;&lt;/icon&gt;</code></pre>
           </div>
         </div>
       </section>
 
       <section>
-        <h3>All highly configurable</h3>
-        <p>Many new configuration options</p>
-        <p>Much easier to change the design</p>
-      </section>
-
-      <section>
         <h3>V1 Navigation:</h3>
-        <p>UI-Router: challenge to have full control</p>
         <p>Traditional URL based history makes this difficult</p>
-        <p>Developers <strong>NEED</strong> to be in complete control</p>
-        <p>For v2, we needed to rethink navigation</p>
-        <p>v1's routing was tightly coupled to URLs</p>
+        <p>UI-Router: challenge to have full control</p>
+        <p>Navigation was tightly coupled to URLs</p>
+        <p>Developers <strong>NEED</strong> complete control</p>
       </section>
 
       <section>
         <h3>Push/Pop Navigation</h3>
+        <p>Rethought navigation for v2</p>
         <p>Similar to iOS/Android navigation</p>
-        <p>More robust and powerful</p>
-        <p>More control over the navigation experience</p>
+        <p>Full control of navigation experience</p>
       </section>
 
       <section>
@@ -222,10 +210,10 @@ $colors: (
         <pre><code class="stylus">
 $colors: (
   primary:     #387ef5,
-  my-brand:    #ead351
+  mycolor:     #ead351
 );
         </code></pre>
-        <p>Will only generate CSS for <code>primary</code> and <code>my-brand</code></p>
+        <p>Will only generate CSS for <code>primary</code> and <code>mycolor</code></p>
         <p>Slims down your CSS, giving you only what you need</p>
         <p>Makes customization even easier</p>
       </section>
@@ -249,27 +237,28 @@ $colors: (
         <h3>v2 Animations</h3>
         <p>Web Animations API</p>
         <p>Easy to customize</p>
-        <p>Friendly CSS syntax</p>
         <p>Interactive control</p>
         <p>Easy to change and add new animations</p>
-        <p>[DEMO IOS TRANSITION]</p>
         <p>stats about how many elements, animations, css properties animating</p>
       </section>
 
       <section>
-        <blockquote>
-          CSS friendly syntax, but adds the options of variables, controls, and finish callbacks
-        </blockquote>
-      </section>
-
-      <section>
+        <h3>Web Animations API</h3>
         <p>Baked into Chrome natively</p>
         <p>Great performance on Android</p>
         <p>Polyfill for iOS offers the same great performance</p>
       </section>
 
       <section>
-        <h3></h3>
+        <h3>Highly Configurable</h3>
+        <p>Almost everything has a config value</p>
+        <p>Global config</p>
+        <p>Platform config</p>
+        <p>Attribute config</p>
+      </section>
+
+      <section>
+        <h3>JavaScript</h3>
         <p>Ionic v1 was built with ES5</p>
         <p>Ionic v2 has been Built with the latest standards</p>
         <p>ES6 brings many new features</p>
@@ -292,20 +281,19 @@ $colors: (
       </section>
 
       <section>
-        <h3>Ionic CLI</h3>
-        <p>Ready to go</p>
-        <p>ES6/Typescript Transpilation</p>
-        <p>Sass compiling</p>
-        <p>Cordova builds</p>
-        <p>Webpack bundling</p>
-      </section>
-
-      <section>
         <h3>Native Plugins</h3>
         <p>Batteries included</p>
         <p>We're bring it straight into Ionic</p>
         <p>Made it even easier to get native access</p>
         <p>Built to work with both Cordova and browsers</p>
+      </section>
+
+      <section>
+        <h3>Ionic CLI</h3>
+        <p>ES6/Typescript Transpilation</p>
+        <p>Sass compiling</p>
+        <p>Cordova builds</p>
+        <p>Webpack bundling</p>
       </section>
 
       <section>
@@ -315,19 +303,18 @@ $colors: (
       </section>
 
       <section>
-        <h3>What's Next!</h3>
-        <p>Releasing alpha today</p>
-        <p>Staying in sync with Angular2's release</p>
-        <p>More native features</p>
-        <p>Windows Phone support</p>
-      </section>
-
-      <section>
         <h3>Huge Community!</h3>
         <p>2M+ page views per month on our forum</p>
         <p>105 Ionic Meetup Groups around the world</p>
         <p>189 of contributors</p>
-        <p>Over 3,000 active members in our Slack channel</p>
+        <p>3,000+ active members in our Slack channel</p>
+      </section>
+
+      <section>
+        <h3>What's Next!</h3>
+        <p>Releasing alpha next week</p>
+        <p>Staying 'Nsync with Angular2</p>
+        <p>Add more native features</p>
       </section>
 
       <section>
