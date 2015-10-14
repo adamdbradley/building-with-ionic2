@@ -6,3 +6,5 @@ node_modules/
 .sass-cache
 css/reveal.min.css
 js/reveal.min.js
+
+demos/ionic2-starter-tabs/
