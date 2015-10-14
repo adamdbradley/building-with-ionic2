@@ -64,55 +64,77 @@
       </section>
 
       <section>
-        <h4>Ionic v1 is great</h4>
-        <p>Provided a hybrid SDK that didn't exist</p>
-        <p>Validated the hybrid approach</p>
-        <p>Garnered massive adoption</p>
-        <p>Built during iOS 6</p>
-        <p>Android 4.0 - 4.3</p>
-      </section>
-
-      <section>
-        <h3>A lot's changed since then</h3>
-        <p>Better/faster devices!</p>
-        <p>Fewer slow/bad devices!</p>
-        <p>Improved browser engines!</p>
-        <p>Widely available browser APIs!</p>
-      </section>
-
-      <section>
-        <div style="
-          background: url(img/ionic2.png) no-repeat center center;
-          background-size: 400px 280px;
-          position: absolute;
-          width: 100%;
-          height: 100%; z-index: -1;"></div>
-        <h3>Ionic 2</h3>
-        <p>Same powerful framework</p>
-        <p>With lessons learned from v1</p>
-        <p>Amazing performance from Angular2</p>
-      </section>
-
-      <section>
-        <h3>Goals to improve from v1</h3>
-        <p>Simplicity</p>
-        <p>Platform Continuity</p>
-        <p>Performance</p>
-        <p>Creative Freedom</p>
-        <p>Code once</p>
+        <div flex>
+          <div col>
+            <h4>Ionic v1 is great</h4>
+            <p>Provided a hybrid SDK that didn't exist</p>
+            <p>Validated the hybrid approach</p>
+            <p>Garnered massive adoption</p>
+            <p>Built during iOS 6</p>
+            <p>Android 4.0 - 4.3</p>
+          </div>
+          <div col center>
+            <img src="img/v1-is-great.png" style="height: 290px">
+          </div>
+        </div>
       </section>
 
       <section>
         <div flex>
-          <div col text-left>
+          <div col>
+            <h3>A lot's changed</h3>
+            <p>Better/faster devices!</p>
+            <p>Fewer slow/bad devices!</p>
+            <p>Improved browser engines!</p>
+            <p>Widely available browser APIs!</p>
+          </div>
+          <div col center>
+            <img src="img/alot-has-changed.png">
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div flex>
+          <div col>
+            <h3>Ionic 2</h3>
+            <p>Same powerful framework</p>
+            <p>With lessons learned from v1</p>
+            <p>Amazing performance from Angular2</p>
+          </div>
+          <div col center>
+            <img src="img/ionic2.png">
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div flex>
+          <div col>
+            <h3>v2 Goals</h3>
+            <p>Simplicity</p>
+            <p>Platform Continuity</p>
+            <p>Performance</p>
+            <p>Creative Freedom</p>
+            <p>Code once</p>
+          </div>
+          <div col center>
+            <img src="img/goals.png">
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div flex>
+          <div col>
             <h3>Simplicity</h3>
             <p>Component Model</p>
             <p>Elements and attributes</p>
             <p>Cleaner slate for customization</p>
             <p>Less clutter</p>
           </div>
-          <div col>
-            <pre><code class="html">&lt;button&gt;...&lt;/button&gt;
+          <pre col>
+            <code class="html">&lt;button&gt;...&lt;/button&gt;
 
 &lt;button danger&gt;...&lt;/button&gt;
 
@@ -121,185 +143,249 @@
 &lt;ion-list&gt;
   &lt;ion-item&gt;...&lt;/ion-item&gt;
   &lt;ion-item&gt;...&lt;/ion-item&gt;
-&lt;/ion-list&gt;</code></pre>
-          </div>
+&lt;/ion-list&gt;</code>
+          </pre>
         </div>
       </section>
 
       <section>
-        <h3>Platform Continuity</h3>
-        <p>iOS</p>
-        <p>Material Design</p>
-        <p>Same HTML and JS</p>
-        <p>More than just different CSS</p>
+        <div flex>
+          <div col>
+            <h3>Platform Continuity</h3>
+            <p>iOS : Android</p>
+            <p>Same HTML and JS</p>
+            <p>More than just different CSS</p>
+          </div>
+          <div col center>
+            <img src="img/platformcont.png">
+          </div>
+        </div>
       </section>
 
-      <!-- <section class="mode-demo">
+      <section class="mode-demo">
         <div flex>
           <div col>
             <div class="demo demo-ios" id="mode-ios">
-              ios
+              <iframe src="/demos/ionic2-starter-tabs/www/index.html?ionicplatform=ios"></iframe>
             </div>
           </div>
           <div col>
             <div class="demo demo-md" id="mode-md">
-              android
+              <iframe src="/demos/ionic2-starter-tabs/www/index.html?ionicplatform=android"></iframe>
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
 
       <section>
         <div flex>
-          <div col text-left>
-            <h3>Icons</h3>
-            <p>SVGs</p>
-            <p>iOS version</p>
-            <p>Material Design version</p>
-          </div>
           <div col>
-            <pre><code class="html">&lt;icon home&gt;&lt;/icon&gt;
+            <h3>Icons</h3>
+            <p>~900 Ionicons</p>
+            <p>Now SVGs</p>
+            <p>iOS versions</p>
+            <p>MD versions</p>
+          </div>
+          <pre col>
+            <code class="html">&lt;icon home&gt;&lt;/icon&gt;
 
-&lt;icon star&gt;&lt;/icon&gt;
+&lt;icon mail&gt;&lt;/icon&gt;
 
-&lt;icon share&gt;&lt;/icon&gt;</code></pre>
+&lt;icon share&gt;&lt;/icon&gt;
+
+&lt;icon settings&gt;&lt;/icon&gt;</code>
+          </pre>
+        </div>
+      </section>
+
+      <section>
+        <div flex>
+          <div col>
+            <h3>V1 Navigation</h3>
+            <p>Traditional URL based history makes this difficult</p>
+            <p>UI-Router: challenge to have full control</p>
+            <p>Navigation was tightly coupled to URLs</p>
+            <p>Developers <strong>NEED</strong> complete control</p>
           </div>
         </div>
       </section>
 
       <section>
-        <h3>V1 Navigation:</h3>
-        <p>Traditional URL based history makes this difficult</p>
-        <p>UI-Router: challenge to have full control</p>
-        <p>Navigation was tightly coupled to URLs</p>
-        <p>Developers <strong>NEED</strong> complete control</p>
+        <div flex>
+          <div col>
+            <h3>Push/Pop Navigation</h3>
+            <p>Rethought navigation for v2</p>
+            <p>Similar to iOS/Android navigation</p>
+            <p>Full control of navigation experience</p>
+          </div>
+        </div>
       </section>
 
       <section>
-        <h3>Push/Pop Navigation</h3>
-        <p>Rethought navigation for v2</p>
-        <p>Similar to iOS/Android navigation</p>
-        <p>Full control of navigation experience</p>
+        <div flex>
+          <div col>
+            <h3>Sass</h3>
+            <p>Sass is enabled by default</p>
+            <p>Apps should fit their brand first</p>
+            <p>Easier to add/remove custom colors</p>
+            <p>Providing numerous Ionic themes</p>
+            <p>Build tools already included</p>
+          </div>
+          <div col center>
+            <img src="img/sass.png">
+          </div>
+        </div>
       </section>
 
       <section>
-        <h3>Sass</h3>
-        <p>Sass is enabled by default</p>
-        <p>Apps should fit their brand first</p>
-        <p>Easier to add/remove custom colors</p>
-        <p>Providing numerous Ionic themes</p>
-        <p>Build tools already included</p>
+        <div flex>
+          <div col>
+            <h3>Colors</h3>
+            <p>Design for your brand</p>
+            <p>Easily customize entire theme</p>
+            <p>Add, Remove, Rename</p>
+          </div>
+          <pre col><code class="stylus">
+  $colors: (
+    primary:    #387ef5,
+    secondary:  #32db64,
+    danger:     #f53d3d,
+    light:      #f4f4f4,
+    dark:       #222222,
+  )
+          </code></pre>
+        </div>
+        <div style="text-align: right">
+          <img src="img/colors.png" width="490px">
+        </div>
       </section>
 
       <section>
-        <h3>Base Colors are defined in a map</h3>
-        <pre><code class="stylus">
-$colors: (
-  primary:    #387ef5,
-  secondary:  #32db64,
-  danger:     #f53d3d,
-  light:      #f4f4f4,
-  dark:       #222222,
-);
-        </code></pre>
-        <p>Easily add, remove, update or rename colors</p>
+        <div flex>
+          <div col>
+            <h3>v1 Animations</h3>
+            <p>Mix of CSS and JS</p>
+            <p>CSS animations are quite limiting</p>
+            <p>Difficult to interact with</p>
+          </div>
+        </div>
       </section>
 
       <section>
-        <h3>Design for your brand</h3>
-        <pre><code class="stylus">
-$colors: (
-  primary:     #387ef5,
-  mycolor:     #ead351
-);
-        </code></pre>
-        <p>Will only generate CSS for <code>primary</code> and <code>mycolor</code></p>
-        <p>Slims down your CSS, giving you only what you need</p>
-        <p>Makes customization even easier</p>
+        <div flex>
+          <div col>
+            <h3>Web Animations API</h3>
+            <p>Power of CSS performance</p>
+            <p>Flexibility of JavaScript</p>
+            <p>W3C Spec: Editors Draft</p>
+            <p><a href="https://w3c.github.io/web-animations/">w3c.github.io/web-animations</a></p>
+          </div>
+        </div>
       </section>
 
       <section>
-        <h3>Animations</h3>
-        <p>v1 animations were a mix of CSS and JS</p>
-        <p>CSS animations can be quite limiting</p>
-        <p>Difficult to interact with</p>
+        <div flex>
+          <div col>
+            <h3>v2 Animations</h3>
+            <p>Web Animations API</p>
+            <p>Easy to customize</p>
+            <p>Interactive control</p>
+            <p>Easy to change and add new animations</p>
+            <p>stats about how many elements, animations, css properties animating</p>
+          </div>
+        </div>
       </section>
 
       <section>
-        <h3>Web Animations API</h3>
-        <p>Power of CSS performance</p>
-        <p>Flexibility of JavaScript</p>
-        <p>W3C Spec: Editors Draft</p>
-        <p><a href="https://w3c.github.io/web-animations/">w3c.github.io/web-animations</a></p>
+        <div flex>
+          <div col>
+            <h3>Web Animations API</h3>
+            <p>Baked into Chrome natively</p>
+            <p>Great performance on Android</p>
+            <p>Polyfill for iOS offers the same great performance</p>
+          </div>
+        </div>
       </section>
 
       <section>
-        <h3>v2 Animations</h3>
-        <p>Web Animations API</p>
-        <p>Easy to customize</p>
-        <p>Interactive control</p>
-        <p>Easy to change and add new animations</p>
-        <p>stats about how many elements, animations, css properties animating</p>
+        <div flex>
+          <div col>
+            <h3>Highly Configurable</h3>
+            <p>Almost everything has a config value</p>
+            <p>Global config</p>
+            <p>Platform config</p>
+            <p>Attribute config</p>
+          </div>
+        </div>
       </section>
 
       <section>
-        <h3>Web Animations API</h3>
-        <p>Baked into Chrome natively</p>
-        <p>Great performance on Android</p>
-        <p>Polyfill for iOS offers the same great performance</p>
+        <div flex>
+          <div col>
+            <h3>JavaScript</h3>
+            <p>Ionic v1 was built with ES5</p>
+            <p>Ionic v2 has been Built with the latest standards</p>
+            <p>ES6 brings many new features</p>
+          </div>
+        </div>
       </section>
 
       <section>
-        <h3>Highly Configurable</h3>
-        <p>Almost everything has a config value</p>
-        <p>Global config</p>
-        <p>Platform config</p>
-        <p>Attribute config</p>
+        <div flex>
+          <div col>
+            <h3>A Few Benefits of ES6</h3>
+            <p>Modular: Import what you need and gets rid of globals</p>
+            <p>Arrow Functions: A `this` context that makes sense</p>
+            <p>Scoping: <code>let</code> defines a block-scoped variable</p>
+            <p>Promises: Built into the language natively</p>
+            <p>Classes: Simpler syntax for building objects</p>
+          </div>
+        </div>
       </section>
 
       <section>
-        <h3>JavaScript</h3>
-        <p>Ionic v1 was built with ES5</p>
-        <p>Ionic v2 has been Built with the latest standards</p>
-        <p>ES6 brings many new features</p>
+        <div flex>
+          <div col>
+            <h3>TypeScript</h3>
+            <p>ES6 + ES7 Decorators + Types</p>
+            <p>Ionic 2 and NG2 built using TS</p>
+            <p>Code completion in your editor</p>
+          </div>
+        </div>
       </section>
 
       <section>
-        <h3>A Few Benefits of ES6</h3>
-        <p>Modular: Import what you need and gets rid of globals</p>
-        <p>Arrow Functions: A `this` context that makes sense</p>
-        <p>Scoping: <code>let</code> defines a block-scoped variable</p>
-        <p>Promises: Built into the language natively</p>
-        <p>Classes: Simpler syntax for building objects</p>
+        <div flex>
+          <div col>
+            <h3>Native Plugins</h3>
+            <p>Batteries included</p>
+            <p>We're bring it straight into Ionic</p>
+            <p>Made it even easier to get native access</p>
+            <p>Built to work with both Cordova and browsers</p>
+          </div>
+        </div>
       </section>
 
       <section>
-        <h3>TypeScript</h3>
-        <p>ES6 + ES7 Decorators + Types</p>
-        <p>Ionic 2 and NG2 built using TS</p>
-        <p>Code completion in your editor</p>
+        <div flex>
+          <div col>
+            <h3>Ionic CLI</h3>
+            <p>ES6/Typescript Transpilation</p>
+            <p>Sass compiling</p>
+            <p>Cordova builds</p>
+            <p>Webpack bundling</p>
+          </div>
+        </div>
       </section>
 
       <section>
-        <h3>Native Plugins</h3>
-        <p>Batteries included</p>
-        <p>We're bring it straight into Ionic</p>
-        <p>Made it even easier to get native access</p>
-        <p>Built to work with both Cordova and browsers</p>
-      </section>
-
-      <section>
-        <h3>Ionic CLI</h3>
-        <p>ES6/Typescript Transpilation</p>
-        <p>Sass compiling</p>
-        <p>Cordova builds</p>
-        <p>Webpack bundling</p>
-      </section>
-
-      <section>
-        <h3>Want to try it out now?</h3>
-        <p>We want you're feedback</p>
-        <p><code><a href="http://ionicframework.com/docs/v2/">ionicframework.com/docs/v2</a></code></p>
+        <div flex>
+          <div col>
+            <h3>Want to try it out now?</h3>
+            <p>We want you're feedback</p>
+            <p><code><a href="http://ionicframework.com/docs/v2/">ionicframework.com/docs/v2</a></code></p>
+          </div>
+        </div>
       </section>
 
       <section>

@@ -62,7 +62,8 @@ section.has-light-background {
   h1, h2, h3, h4 {
     text-transform: uppercase;
     font-weight:600;
-    letter-spacing:2px;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
   }
 
   p, th, td, ol, ul, li {
@@ -132,10 +133,6 @@ section.has-light-background {
     color: $ionicBlue;
   }
 
-  pre code {
-    background-color: #1B2B34;
-  }
-
   .headshot {
     border-radius: 50%;
     border: 5px solid #202532;
@@ -148,14 +145,10 @@ section.has-light-background {
     transition: color 0.15s ease;
   }
 
-  [text-left] {
-    text-align: left;
-    padding-left: 40px;
-  }
-
-  [vertically-center] {
+  [center] {
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 
   [flex] {
@@ -164,6 +157,18 @@ section.has-light-background {
 
   [col] {
     flex: 1;
+    text-align: left;
+    padding-right: 40px;
+  }
+
+  pre[col],
+  pre code {
+    background-color: #22272f;
+    font-size: 20px;
+    line-height: 26px;
+  }
+  pre[col]{
+    padding: 40px;
   }
 
   .mode-demo {
@@ -175,17 +180,45 @@ section.has-light-background {
     }
 
     .demo-ios {
-      background: red;
-      width: 300px;
-      height: 400px;
+      position: relative;
+      background: url('/img/devices-sprite-transparent.png') no-repeat;
+      background-size: 375px 1287px;
+      width: 360px;
+      height: 600px;
+
+      iframe {
+        position: absolute;
+        top: 30px;
+        left: 29px;
+        width: 320px;
+        height: 540px;
+        transform: scale(0.83);
+      }
     }
 
     .demo-md {
-      background: blue;
-      width: 300px;
-      height: 400px;
+      position: relative;
+      background: url("/img/devices-sprite-transparent.png") no-repeat 0px -643px;
+      background-size: 375px 1287px;
+      width: 360px;
+      height: 640px;
+
+      iframe {
+        position: absolute;
+        top: 53px;
+        left: 42px;
+        width: 347px;
+        height: 564px;
+        transform: scale(0.84);
+        transform-origin: 0 0;
+      }
     }
 
+  }
+
+  iframe {
+    max-width: 100%;
+    max-height: 100%;
   }
 
 }

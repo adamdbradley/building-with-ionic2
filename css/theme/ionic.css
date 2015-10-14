@@ -299,7 +299,8 @@ body {
   .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
     text-transform: uppercase;
     font-weight: 600;
-    letter-spacing: 2px; }
+    letter-spacing: 2px;
+    margin-bottom: 40px; }
   .reveal p, .reveal th, .reveal td, .reveal ol, .reveal ul, .reveal li {
     text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2); }
   .reveal section img {
@@ -341,8 +342,6 @@ body {
   .reveal .ionic-blue * {
     text-shadow: none;
     color: #313744; }
-  .reveal pre code {
-    background-color: #1B2B34; }
   .reveal .headshot {
     border-radius: 50%;
     border: 5px solid #202532;
@@ -351,25 +350,54 @@ body {
     color: white;
     text-decoration: none;
     transition: color 0.15s ease; }
-  .reveal [text-left] {
-    text-align: left;
-    padding-left: 40px; }
-  .reveal [vertically-center] {
+  .reveal [center] {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    justify-content: center; }
   .reveal [flex] {
     display: flex; }
   .reveal [col] {
-    flex: 1; }
+    flex: 1;
+    text-align: left;
+    padding-right: 40px; }
+  .reveal pre[col],
+  .reveal pre code {
+    background-color: #22272f;
+    font-size: 20px;
+    line-height: 26px; }
+  .reveal pre[col] {
+    padding: 40px; }
   .reveal .mode-demo [col] {
     align-items: center;
     display: flex;
     flex-direction: column; }
   .reveal .mode-demo .demo-ios {
-    background: red;
-    width: 300px;
-    height: 400px; }
+    position: relative;
+    background: url("/img/devices-sprite-transparent.png") no-repeat;
+    background-size: 375px 1287px;
+    width: 360px;
+    height: 600px; }
+    .reveal .mode-demo .demo-ios iframe {
+      position: absolute;
+      top: 30px;
+      left: 29px;
+      width: 320px;
+      height: 540px;
+      transform: scale(0.83); }
   .reveal .mode-demo .demo-md {
-    background: blue;
-    width: 300px;
-    height: 400px; }
+    position: relative;
+    background: url("/img/devices-sprite-transparent.png") no-repeat 0px -643px;
+    background-size: 375px 1287px;
+    width: 360px;
+    height: 640px; }
+    .reveal .mode-demo .demo-md iframe {
+      position: absolute;
+      top: 53px;
+      left: 42px;
+      width: 347px;
+      height: 564px;
+      transform: scale(0.84);
+      transform-origin: 0 0; }
+  .reveal iframe {
+    max-width: 100%;
+    max-height: 100%; }
