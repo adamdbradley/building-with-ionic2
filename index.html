@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="css/reveal.css">
   <link rel="stylesheet" href="css/theme/ionic.css" id="theme">
   <link rel="stylesheet" href="lib/css/oceanicnext.css">
-  <link rel="icon" type="image/png" href="favicon.icon">
+  <link rel="icon" href="favicon.ico">
   <script>
     var link = document.createElement('link');
     link.rel = 'stylesheet';
@@ -198,6 +198,52 @@
         </div>
       </section>
 
+      <section class="icon-demo">
+        <div class="icon-buttons">
+          <button id="icons-ios" class="active">iOS</button>
+          <button id="icons-android">Android</button>
+        </div>
+        <div class="icons-preview">
+
+          <div flex>
+            <div col><i class="ion ion-ios-alarm"></i></div>
+            <div col><i class="ion ion-ios-musical-notes"></i></div>
+            <div col><i class="ion ion-ios-share"></i></div>
+            <div col><i class="ion ion-ios-book"></i></div>
+            <div col><i class="ion ion-ios-unlock"></i></div>
+            <div col><i class="ion ion-ios-bug"></i></div>
+          </div>
+
+          <div flex>
+            <div col><i class="ion ion-ios-bulb"></i></div>
+            <div col><i class="ion ion-ios-calendar"></i></div>
+            <div col><i class="ion ion-ios-camera"></i></div>
+            <div col><i class="ion ion-ios-cart"></i></div>
+            <div col><i class="ion ion-ios-chatbubbles"></i></div>
+            <div col><i class="ion ion-ios-cloud"></i></div>
+          </div>
+
+          <div flex>
+            <div col><i class="ion ion-ios-compass"></i></div>
+            <div col><i class="ion ion-ios-contact"></i></div>
+            <div col><i class="ion ion-ios-create"></i></div>
+            <div col><i class="ion ion-ios-trash"></i></div>
+            <div col><i class="ion ion-ios-flower"></i></div>
+            <div col><i class="ion ion-ios-globe"></i></div>
+          </div>
+
+          <div flex>
+            <div col><i class="ion ion-ios-home"></i></div>
+            <div col><i class="ion ion-ios-image"></i></div>
+            <div col><i class="ion ion-ios-locate"></i></div>
+            <div col><i class="ion ion-ios-mail"></i></div>
+            <div col><i class="ion ion-ios-mic"></i></div>
+            <div col><i class="ion ion-ios-settings"></i></div>
+          </div>
+
+        </div>
+      </section>
+
       <section>
         <div flex>
           <div col>
@@ -215,8 +261,11 @@
           <div col>
             <h3>Push/Pop Navigation</h3>
             <p>Rethought navigation for v2</p>
-            <p>Similar to iOS/Android navigation</p>
-            <p>Full control of navigation experience</p>
+            <p>Similar to iOS/Android</p>
+            <p>Full control of nav experience</p>
+          </div>
+          <div col center>
+            <img src="img/pushpop.png">
           </div>
         </div>
       </section>
@@ -268,6 +317,17 @@
             <p>CSS animations are quite limiting</p>
             <p>Difficult to interact with</p>
           </div>
+          <pre col><code class="stylus">
+.entering-view {
+  transform: translate3d(...);
+  transition-property: transform;
+  transition-duration: 300ms;
+}
+
+.entering-view.active {
+  transform: translate3d(...);
+}
+          </code></pre>
         </div>
       </section>
 
@@ -275,10 +335,14 @@
         <div flex>
           <div col>
             <h3>Web Animations API</h3>
-            <p>Power of CSS performance</p>
+            <p>Browser's animation engine</p>
             <p>Flexibility of JavaScript</p>
-            <p>W3C Spec: Editors Draft</p>
-            <p><a href="https://w3c.github.io/web-animations/">w3c.github.io/web-animations</a></p>
+            <p><a href="https://w3c.github.io/web-animations/">W3C Spec: Editors Draft</a></p>
+            <p>Native on Chrome/Android</p>
+            <p>Great iOS polyfill</p>
+          </div>
+          <div col center>
+            <img src="img/w3c.png">
           </div>
         </div>
       </section>
@@ -287,22 +351,13 @@
         <div flex>
           <div col>
             <h3>v2 Animations</h3>
-            <p>Web Animations API</p>
-            <p>Easy to customize</p>
             <p>Interactive control</p>
-            <p>Easy to change and add new animations</p>
-            <p>stats about how many elements, animations, css properties animating</p>
+            <p>Easy to customize</p>
+            <p>Extend and add new animations</p>
+            <p></p>
           </div>
-        </div>
-      </section>
-
-      <section>
-        <div flex>
-          <div col>
-            <h3>Web Animations API</h3>
-            <p>Baked into Chrome natively</p>
-            <p>Great performance on Android</p>
-            <p>Polyfill for iOS offers the same great performance</p>
+          <div col center>
+            [swipe to go back demo]
           </div>
         </div>
       </section>
@@ -311,10 +366,13 @@
         <div flex>
           <div col>
             <h3>Highly Configurable</h3>
-            <p>Almost everything has a config value</p>
+            <p>Almost everything has a config</p>
             <p>Global config</p>
             <p>Platform config</p>
             <p>Attribute config</p>
+          </div>
+          <div col center>
+            <img src="img/configurable.png">
           </div>
         </div>
       </section>
@@ -323,9 +381,12 @@
         <div flex>
           <div col>
             <h3>JavaScript</h3>
-            <p>Ionic v1 was built with ES5</p>
-            <p>Ionic v2 has been Built with the latest standards</p>
+            <p>v1 was built with ES5</p>
+            <p>v2 built with the latest standards</p>
             <p>ES6 brings many new features</p>
+          </div>
+          <div col center>
+            <img src="img/js.png">
           </div>
         </div>
       </section>
@@ -334,11 +395,11 @@
         <div flex>
           <div col>
             <h3>A Few Benefits of ES6</h3>
-            <p>Modular: Import what you need and gets rid of globals</p>
-            <p>Arrow Functions: A `this` context that makes sense</p>
-            <p>Scoping: <code>let</code> defines a block-scoped variable</p>
-            <p>Promises: Built into the language natively</p>
-            <p>Classes: Simpler syntax for building objects</p>
+            <p>Modules</p>
+            <p>Arrow Functions</p>
+            <p>Sane Scoping</p>
+            <p>Promises</p>
+            <p>Classes</p>
           </div>
         </div>
       </section>
@@ -351,6 +412,9 @@
             <p>Ionic 2 and NG2 built using TS</p>
             <p>Code completion in your editor</p>
           </div>
+          <div col center>
+            <img src="img/typescript.png">
+          </div>
         </div>
       </section>
 
@@ -359,9 +423,12 @@
           <div col>
             <h3>Native Plugins</h3>
             <p>Batteries included</p>
-            <p>We're bring it straight into Ionic</p>
-            <p>Made it even easier to get native access</p>
-            <p>Built to work with both Cordova and browsers</p>
+            <p>Brought straight into Ionic</p>
+            <p>Even easier to get native access</p>
+            <p>Work with both Cordova and browsers</p>
+          </div>
+          <div col center>
+            <img src="img/plugins.png">
           </div>
         </div>
       </section>
@@ -374,6 +441,8 @@
             <p>Sass compiling</p>
             <p>Cordova builds</p>
             <p>Webpack bundling</p>
+            <p>Scaffolding/Architecture</p>
+            <p>Recommended best practices</p>
           </div>
         </div>
       </section>
@@ -392,13 +461,13 @@
         <h3>Huge Community!</h3>
         <p>2M+ page views per month on our forum</p>
         <p>105 Ionic Meetup Groups around the world</p>
-        <p>189 of contributors</p>
+        <p>189 contributors</p>
         <p>3,000+ active members in our Slack channel</p>
       </section>
 
       <section>
         <h3>What's Next!</h3>
-        <p>Releasing alpha next week</p>
+        <p>Alpha released today</p>
         <p>Staying 'Nsync with Angular2</p>
         <p>Add more native features</p>
       </section>
@@ -452,6 +521,36 @@
         }
       }]
     });
+
+    (function() {
+      var iosIcons = document.getElementById('icons-ios');
+      var androidIcons = document.getElementById('icons-android');
+      var icons = document.querySelectorAll('.icons-preview .ion');
+
+      iosIcons.addEventListener('click', function(ev) {
+        iosIcons.classList.add('active');
+        androidIcons.classList.remove('active');
+        setMode('ios');
+      });
+
+      androidIcons.addEventListener('click', function(ev) {
+        iosIcons.classList.remove('active');
+        androidIcons.classList.add('active');
+        setMode('md');
+      });
+
+      function setMode(mode) {
+        for (var i = 0; i < icons.length; i++) {
+          if (mode == 'ios') {
+            icons[i].className = icons[i].className.replace('-md-', '-ios-') + '-outline';
+          } else {
+            icons[i].className = icons[i].className.replace('-ios-', '-md-').replace('-outline', '');
+          }
+        }
+      }
+
+      setMode('ios');
+    })();
   </script>
 
 </body>

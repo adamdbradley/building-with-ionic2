@@ -222,3 +222,47 @@ section.has-light-background {
   }
 
 }
+
+.icon-demo {
+
+  button {
+    margin: 0 20px;
+    padding: 10px 30px;
+    font-size: 18px;
+    -webkit-appearance: none;
+    border: 0;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    outline: 0;
+    background: transparent;
+    color: #ddd;
+
+    &:hover {
+      border-bottom-color: rgba(255,255,255, 0.2)
+    }
+
+    &.active {
+      border-bottom-color: #ddd;
+    }
+  }
+
+  .icons-preview {
+    margin: 40px auto ;
+    width: 820px;
+
+    div[flex] {
+      margin: 45px 0;
+    }
+
+    div[col] {
+      text-align: center;
+      padding: 0;
+    }
+
+    i {
+      font-size: 72px;
+    }
+
+  }
+
+}
