@@ -302,19 +302,11 @@ body {
     letter-spacing: 2px;
     margin-bottom: 40px; }
   .reveal p, .reveal th, .reveal td, .reveal ol, .reveal ul, .reveal li {
-    text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2); }
+    text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
+    font-weight: 400; }
   .reveal section img {
     background: transparent;
     border: 0;
-    box-shadow: none; }
-  .reveal blockquote {
-    display: block;
-    position: relative;
-    width: 70%;
-    margin: 20px auto;
-    padding: 5px;
-    font-style: italic;
-    background: transparent;
     box-shadow: none; }
   .reveal a {
     color: inherit;
@@ -328,20 +320,6 @@ body {
       padding: 0 0 0 70px; }
   .reveal strong {
     font-weight: 500; }
-  .reveal .native-logos img {
-    width: 100px;
-    margin: 40px 20px 0 20px; }
-  .reveal .stack {
-    width: 330px;
-    margin: 0 350px 0 0;
-    list-style-type: none; }
-    .reveal .stack li {
-      margin: 8px;
-      padding: 5px 6px 7px 12px; }
-  .reveal .ionic-blue,
-  .reveal .ionic-blue * {
-    text-shadow: none;
-    color: #313744; }
   .reveal .headshot {
     border-radius: 50%;
     border: 5px solid #202532;
@@ -350,16 +328,18 @@ body {
     color: white;
     text-decoration: none;
     transition: color 0.15s ease; }
-  .reveal [center] {
-    display: flex;
-    align-items: center;
-    justify-content: center; }
   .reveal [flex] {
     display: flex; }
   .reveal [col] {
     flex: 1;
     text-align: left;
     padding-right: 40px; }
+  .reveal [center] {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .reveal [col][center] img {
+    max-height: 420px; }
   .reveal pre[col],
   .reveal pre code {
     background-color: #22272f;

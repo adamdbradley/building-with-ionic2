@@ -68,22 +68,12 @@ section.has-light-background {
 
   p, th, td, ol, ul, li {
     text-shadow: $headingTextShadow;
+    font-weight: 400;
   }
 
   section img {
     background: transparent;
     border: 0;
-    box-shadow: none;
-  }
-
-  blockquote {
-    display: block;
-    position: relative;
-    width: 70%;
-    margin: 20px auto;
-    padding: 5px;
-    font-style: italic;
-    background: transparent;
     box-shadow: none;
   }
 
@@ -107,32 +97,6 @@ section.has-light-background {
     font-weight: 500;
   }
 
-  .native-logos {
-
-    img {
-      width: 100px;
-      margin: 40px 20px 0 20px;
-    }
-
-  }
-
-  .stack {
-    width: 330px;
-    margin: 0 350px 0 0;
-    list-style-type: none;
-
-    li {
-      margin: 8px;
-      padding: 5px 6px 7px 12px;
-    }
-  }
-
-  .ionic-blue,
-  .ionic-blue * {
-    text-shadow: none;
-    color: $ionicBlue;
-  }
-
   .headshot {
     border-radius: 50%;
     border: 5px solid #202532;
@@ -145,12 +109,6 @@ section.has-light-background {
     transition: color 0.15s ease;
   }
 
-  [center] {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
   [flex] {
     display: flex;
   }
@@ -159,6 +117,16 @@ section.has-light-background {
     flex: 1;
     text-align: left;
     padding-right: 40px;
+  }
+
+  [center] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  [col][center] img {
+    max-height: 420px;
   }
 
   pre[col],

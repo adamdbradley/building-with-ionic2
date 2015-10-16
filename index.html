@@ -90,7 +90,7 @@
             <p>Better/faster devices!</p>
             <p>Fewer slow/bad devices!</p>
             <p>Improved browser engines!</p>
-            <p>Widely available browser APIs!</p>
+            <p>Widely available web APIs!</p>
           </div>
           <div col center>
             <img src="img/alot-has-changed.png">
@@ -160,7 +160,8 @@
             <p>iOS : Android</p>
             <p>Same HTML and JS</p>
             <p>More than just different CSS</p>
-            <p>One code base, multiple platforms</p>
+            <p>One code base</p>
+            <p>Multiple platforms</p>
           </div>
           <div col center>
             <img src="img/platformcont.png">
@@ -172,12 +173,12 @@
         <div flex>
           <div col>
             <div class="demo demo-ios" id="mode-ios">
-              <iframe src="/demos/ionic2-starter-tabs/www/index.html?ionicplatform=ios"></iframe>
+              <iframe src="/demos/ionic-conference-app/www/index.html?ionicplatform=ios"></iframe>
             </div>
           </div>
           <div col>
             <div class="demo demo-md" id="mode-md">
-              <iframe src="/demos/ionic2-starter-tabs/www/index.html?ionicplatform=android"></iframe>
+              <iframe src="/demos/ionic-conference-app/www/index.html?ionicplatform=android"></iframe>
             </div>
           </div>
         </div>
@@ -278,17 +279,67 @@
 
       <section>
         <div flex>
+          <pre col>
+            <code class="html">&lt;ion-navbar *navbar&gt;
+  &lt;ion-title&gt;Profile&lt;/ion-title&gt;
+&lt;/ion-navbar&gt;
+
+
+&lt;ion-content&gt;
+  {{first}} {{last}}
+&lt;/ion-content&gt;</code>
+          </pre>
+          <pre col>
+            <code class="javascript">@Page({
+  templateUrl: 'profile.html'
+})
+export class Profile {
+  constructor() {
+    this.first = 'Biff';
+    this.last = 'Tannen';
+  }
+}</code>
+          </pre>
+        </div>
+      </section>
+
+      <section>
+        <div flex>
+          <pre col>
+            <code class="html">&lt;ion-tabs&gt;
+
+  &lt;ion-tab [root]="Home" ...         &gt;
+  &lt;ion-tab [root]="Profile" ...         &gt;
+  &lt;ion-tab [root]="Settings" ...         &gt;
+
+&lt;/ion-tabs&gt;</code>
+          </pre>
+          <pre col>
+            <code class="javascript">@App({
+  templateUrl: 'tabs.html'
+})
+class MyApp {
+  constructor() {
+    this.tab1Root = Home;
+    this.tab2Root = Profile;
+    this.tab3Root = Settings;
+  }
+}</code>
+          </pre>
+        </div>
+      </section>
+
+      <section>
+        <div flex>
           <div col>
             <h3>Theming and Customization</h3>
-            <p>Apps should fit their brand first</p>
-            <p>Easier to add/remove custom colors</p>
-            <p>Providing numerous Ionic themes</p>
+            <p>Apps must fit their brand first</p>
+            <p>Numerous Ionic themes</p>
             <p>Build tools already included</p>
             <p>Sass is enabled by default</p>
           </div>
           <div col center>
-            [show an app that doesn't look native, but fits their brand]
-            pacifica
+            <img src="img/theming.png">
           </div>
         </div>
       </section>
@@ -298,8 +349,8 @@
           <div col>
             <h3>Colors</h3>
             <p>Design for your brand</p>
-            <p>Easily customize entire theme</p>
             <p>Add, Remove, Rename</p>
+            <p>Easily customize entire theme</p>
           </div>
           <pre col><code class="stylus">
   $colors: (
@@ -403,8 +454,8 @@
         <div flex>
           <div col>
             <h3>TypeScript</h3>
-            <p>ES6 + ES7 Decorators + Types</p>
-            <p>Ionic 2 and NG2 built using TS</p>
+            <p>ES6 + Decorators + Types</p>
+            <p>Ionic 2 / NG2 built using TS</p>
             <p>Editor Code completion</p>
             <p>[optional]</p>
           </div>
@@ -441,7 +492,7 @@
             <p>Recommended best practices</p>
           </div>
           <div col center>
-            img
+            <img src="img/cli.png">
           </div>
         </div>
       </section>
