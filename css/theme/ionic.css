@@ -312,7 +312,7 @@ body {
     color: inherit;
     text-decoration: underline; }
   .reveal .me {
-    margin: 30px 0 0 130px;
+    margin: 30px 0 0 0px;
     font-size: 1.2em;
     line-height: 2em;
     list-style-type: none; }
@@ -346,41 +346,42 @@ body {
     font-size: 20px;
     line-height: 26px; }
   .reveal pre[col] {
-    padding: 40px; }
-  .reveal .mode-demo [col] {
+    margin: 0;
+    padding: 30px; }
+  .reveal [col][demo] {
     align-items: center;
     display: flex;
     flex-direction: column; }
-  .reveal .mode-demo .demo-ios {
+  .reveal .demo-ios {
     position: relative;
+    top: -40px;
     background: url("/img/devices-sprite-transparent.png") no-repeat;
-    background-size: 375px 1287px;
-    width: 360px;
-    height: 600px; }
-    .reveal .mode-demo .demo-ios iframe {
+    background-size: 455px 1559px;
+    width: 460px;
+    height: 740px; }
+    .reveal .demo-ios iframe {
       position: absolute;
-      top: 30px;
-      left: 29px;
+      top: 75px;
+      left: 69px;
       width: 320px;
-      height: 540px;
-      transform: scale(0.83); }
-  .reveal .mode-demo .demo-md {
+      height: 560px; }
+  .reveal .demo-md {
     position: relative;
-    background: url("/img/devices-sprite-transparent.png") no-repeat 0px -643px;
-    background-size: 375px 1287px;
-    width: 360px;
-    height: 640px; }
-    .reveal .mode-demo .demo-md iframe {
+    top: -60px;
+    background: url("/img/devices-sprite-transparent.png") no-repeat 0px -775px;
+    background-size: 455px 1559px;
+    width: 460px;
+    height: 780px; }
+    .reveal .demo-md iframe {
       position: absolute;
-      top: 53px;
-      left: 42px;
-      width: 347px;
-      height: 564px;
-      transform: scale(0.84);
-      transform-origin: 0 0; }
+      top: 67px;
+      left: 52px;
+      width: 350px;
+      height: 572px; }
   .reveal iframe {
     max-width: 100%;
-    max-height: 100%; }
+    max-height: 100%;
+    overflow: hidden; }
 
 .icon-demo button {
   margin: 0 20px;

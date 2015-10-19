@@ -83,7 +83,7 @@ section.has-light-background {
   }
 
   .me {
-    margin: 30px 0 0 130px;
+    margin: 30px 0 0 0px;
     font-size:1.2em;
     line-height: 2em;
     list-style-type: none;
@@ -136,57 +136,54 @@ section.has-light-background {
     line-height: 26px;
   }
   pre[col]{
-    padding: 40px;
+    margin: 0;
+    padding: 30px;
   }
 
-  .mode-demo {
+  [col][demo] {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
 
-    [col] {
-      align-items: center;
-      display: flex;
-      flex-direction: column;
+  .demo-ios {
+    position: relative;
+    top: -40px;
+    background: url('/img/devices-sprite-transparent.png') no-repeat;
+    background-size: 455px 1559px;
+    width: 460px;
+    height: 740px;
+
+    iframe {
+      position: absolute;
+      top: 75px;
+      left: 69px;
+      width: 320px;
+      height: 560px;
     }
+  }
 
-    .demo-ios {
-      position: relative;
-      background: url('/img/devices-sprite-transparent.png') no-repeat;
-      background-size: 375px 1287px;
-      width: 360px;
-      height: 600px;
+  .demo-md {
+    position: relative;
+    top: -60px;
+    background: url("/img/devices-sprite-transparent.png") no-repeat 0px -775px;
+    background-size: 455px 1559px;
+    width: 460px;
+    height: 780px;
 
-      iframe {
-        position: absolute;
-        top: 30px;
-        left: 29px;
-        width: 320px;
-        height: 540px;
-        transform: scale(0.83);
-      }
+    iframe {
+      position: absolute;
+      top: 67px;
+      left: 52px;
+      width: 350px;
+      height: 572px;
     }
-
-    .demo-md {
-      position: relative;
-      background: url("/img/devices-sprite-transparent.png") no-repeat 0px -643px;
-      background-size: 375px 1287px;
-      width: 360px;
-      height: 640px;
-
-      iframe {
-        position: absolute;
-        top: 53px;
-        left: 42px;
-        width: 347px;
-        height: 564px;
-        transform: scale(0.84);
-        transform-origin: 0 0;
-      }
-    }
-
   }
 
   iframe {
     max-width: 100%;
     max-height: 100%;
+    overflow: hidden;
   }
 
 }
@@ -215,7 +212,7 @@ section.has-light-background {
   }
 
   .icons-preview {
-    margin: 40px auto ;
+    margin: 40px auto;
     width: 820px;
 
     div[flex] {

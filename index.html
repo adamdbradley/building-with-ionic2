@@ -35,11 +35,21 @@
       <section>
         <img src="img/ionic-sdk-landscape-white-1024.png" class="logo" width="450" style="display:block; margin:auto; margin-bottom:80px;">
         <h1 style="font-size:56px">Building cross-platform apps with Ionic 2</h1>
-        <p>Adam Bradley | <a href="https://twitter.com/adamdbradley">@adamdbradley</a></p>
       </section>
 
-      <section>
-        me
+      <section data-background="img/madison.jpg">
+        <h1 class="left dark-shadow">Adam Bradley</h1>
+        <h3 class="left dark-shadow">Lead Ionic Developer</h3>
+        <ul class="me dark-shadow">
+          <li style="background:url(img/marker.png) no-repeat 0 8px;">Madison, WI, USA</li>
+          <li style="background:url(img/twitter.png) no-repeat 0 16px;">
+            <a href="https://twitter.com/adamdbradley" target="_blank" style="text-decoration:none">@adamdbradley</a>
+          </li>
+          <li style="background:url(img/github.png) no-repeat 0 17px;">
+            <a href="https://github.com/adamdbradley" target="_blank" style="text-decoration:none">
+              adamdbradley</a>
+            </li>
+        </ul>
       </section>
 
       <section>
@@ -51,7 +61,7 @@
           height: 100%;
           opacity: 0.1; z-index: -1;"></div>
         <h3 style="font-size:80px;">Ionic!</h3>
-        <p>SDK for Developing Hybrid Apps</p>
+        <p>Mobile apps with web tech</p>
         <p>Focused on mobile first</p>
         <p>Easily customized</p>
         <p>Angular for code structure *</p>
@@ -61,21 +71,20 @@
         <h3>Stats!!</h3>
         <p>Top 40 OSS project (~20,000 stars on GitHub)</p>
         <p>Over ONE MILLION apps built with Ionic</p>
+        <p>Ionic apps have topped app store charts</p>
+        <p>Fortune 50 co’s to YC/TechStars companies</p>
         <p>Amazing community</p>
-        <p>Ionic apps top app store charts</p>
-        <p>Used everywhere from
-          <br>Fortune 50 co’s to YC/TechStars companies</p>
       </section>
 
       <section>
         <div flex>
           <div col>
             <h4>Ionic v1 is great</h4>
-            <p>Provided a hybrid SDK that didn't exist</p>
+            <p>Hybrid SDK that didn't exist</p>
             <p>Validated the hybrid approach</p>
             <p>Garnered massive adoption</p>
             <p>Built during iOS 6</p>
-            <p>Android 4.0 - 4.3</p>
+            <p>Android 2.3 - 4.3</p>
           </div>
           <div col center>
             <img src="img/v1-is-great.png" style="height: 290px">
@@ -89,8 +98,8 @@
             <h3>A lot's changed</h3>
             <p>Better/faster devices!</p>
             <p>Fewer slow/bad devices!</p>
-            <p>Improved browser engines!</p>
             <p>Widely available web APIs!</p>
+            <p>Improved browser engines!</p>
           </div>
           <div col center>
             <img src="img/alot-has-changed.png">
@@ -135,8 +144,8 @@
             <h3>Simplicity</h3>
             <p>Component Model</p>
             <p>Elements and attributes</p>
-            <p>Cleaner slate for customization</p>
-            <p>Less clutter</p>
+            <p>Ready for customization</p>
+            <p>Clean JavaScript</p>
           </div>
           <pre col>
             <code class="html">&lt;button&gt;...&lt;/button&gt;
@@ -155,13 +164,56 @@
 
       <section>
         <div flex>
+          <pre col>
+            <code class="html">&lt;ion-navbar&gt;
+  &lt;ion-title&gt;Profile&lt;/ion-title&gt;
+&lt;/ion-navbar&gt;
+
+
+&lt;ion-content&gt;
+  {{first}} {{last}}
+&lt;/ion-content&gt;</code>
+          </pre>
+          <pre col>
+            <code class="javascript">@Page({
+  templateUrl: 'profile.html'
+})
+export class Profile {
+  constructor() {
+    this.first = 'Biff';
+    this.last = 'Tannen';
+  }
+}</code>
+          </pre>
+        </div>
+      </section>
+
+      <section>
+        <div flex>
+          <pre col>
+            <code class="html">&lt;ion-nav [root]="home"&gt;&lt;/ion-nav&gt;</code>
+          </pre>
+          <pre col>
+            <code class="javascript">@App({
+  templateUrl: 'app.html'
+})
+class MyApp {
+  constructor() {
+    this.home = HomePage;
+  }
+}</code>
+          </pre>
+        </div>
+      </section>
+
+      <section>
+        <div flex>
           <div col>
             <h3>Platform Continuity</h3>
             <p>iOS : Android</p>
+            <p>One code base</p>
             <p>Same HTML and JS</p>
             <p>More than just different CSS</p>
-            <p>One code base</p>
-            <p>Multiple platforms</p>
           </div>
           <div col center>
             <img src="img/platformcont.png">
@@ -169,15 +221,15 @@
         </div>
       </section>
 
-      <section class="mode-demo">
+      <section>
         <div flex>
-          <div col>
-            <div class="demo demo-ios" id="mode-ios">
+          <div col demo>
+            <div class="demo-ios" id="mode-ios">
               <iframe src="/demos/ionic-conference-app/www/index.html?ionicplatform=ios"></iframe>
             </div>
           </div>
-          <div col>
-            <div class="demo demo-md" id="mode-md">
+          <div col >
+            <div class="demo-md" id="mode-md">
               <iframe src="/demos/ionic-conference-app/www/index.html?ionicplatform=android"></iframe>
             </div>
           </div>
@@ -200,7 +252,7 @@
 
 &lt;icon share&gt;&lt;/icon&gt;
 
-&lt;icon settings&gt;&lt;/icon&gt;</code>
+&lt;icon map&gt;&lt;/icon&gt;</code>
           </pre>
         </div>
       </section>
@@ -213,7 +265,7 @@
         <div class="icons-preview">
 
           <div flex>
-            <div col><i class="ion ion-ios-alarm"></i></div>
+            <div col><i class="ion ion-ios-home"></i></div>
             <div col><i class="ion ion-ios-musical-notes"></i></div>
             <div col><i class="ion ion-ios-share"></i></div>
             <div col><i class="ion ion-ios-book"></i></div>
@@ -240,7 +292,7 @@
           </div>
 
           <div flex>
-            <div col><i class="ion ion-ios-home"></i></div>
+            <div col><i class="ion ion-ios-alarm"></i></div>
             <div col><i class="ion ion-ios-image"></i></div>
             <div col><i class="ion ion-ios-locate"></i></div>
             <div col><i class="ion ion-ios-mail"></i></div>
@@ -271,59 +323,35 @@
             <p>Full control of nav experience</p>
             <p>URL and deep-linking support</p>
           </div>
-          <div col center>
-            <img src="img/pushpop.png">
+          <div col demo>
+            <div class="demo-ios">
+              <iframe src="/demos/ionic-conference-app/www/index.html?ionicplatform=ios"></iframe>
+            </div>
           </div>
         </div>
       </section>
 
       <section>
         <div flex>
+          <div col>
+            <h3>Full Control</h3>
+            <p>Push on to the nav stack</p>
+            <p>Pop from the nav stack</p>
+            <p>Insert/Remove/Update</p>
+            <p>URL reflects app's state</p>
+            <p>
+          </div>
           <pre col>
-            <code class="html">&lt;ion-navbar *navbar&gt;
-  &lt;ion-title&gt;Profile&lt;/ion-title&gt;
-&lt;/ion-navbar&gt;
+            <code class="javascript">pushSettings() {
+  this.nav.push(Settings);
+}
 
+goBack() {
+  this.nav.pop();
+}
 
-&lt;ion-content&gt;
-  {{first}} {{last}}
-&lt;/ion-content&gt;</code>
-          </pre>
-          <pre col>
-            <code class="javascript">@Page({
-  templateUrl: 'profile.html'
-})
-export class Profile {
-  constructor() {
-    this.first = 'Biff';
-    this.last = 'Tannen';
-  }
-}</code>
-          </pre>
-        </div>
-      </section>
-
-      <section>
-        <div flex>
-          <pre col>
-            <code class="html">&lt;ion-tabs&gt;
-
-  &lt;ion-tab [root]="Home" ...         &gt;
-  &lt;ion-tab [root]="Profile" ...         &gt;
-  &lt;ion-tab [root]="Settings" ...         &gt;
-
-&lt;/ion-tabs&gt;</code>
-          </pre>
-          <pre col>
-            <code class="javascript">@App({
-  templateUrl: 'tabs.html'
-})
-class MyApp {
-  constructor() {
-    this.tab1Root = Home;
-    this.tab2Root = Profile;
-    this.tab3Root = Settings;
-  }
+resetHome() {
+  this.nav.setRoot(Home);
 }</code>
           </pre>
         </div>
@@ -347,20 +375,21 @@ class MyApp {
       <section>
         <div flex>
           <div col>
-            <h3>Colors</h3>
+            <h3>Colors and Variables</h3>
+            <p>Quickly create entire theme</p>
             <p>Design for your brand</p>
             <p>Add, Remove, Rename</p>
-            <p>Easily customize entire theme</p>
+            <p>~Everything is a variable</p>
           </div>
           <pre col><code class="stylus">
-  $colors: (
-    primary:    #387ef5,
-    secondary:  #32db64,
-    danger:     #f53d3d,
-    light:      #f4f4f4,
-    dark:       #222222,
-  )
-          </code></pre>
+$colors: (
+  primary:    #387ef5,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222222,
+)
+</code></pre>
         </div>
         <div style="text-align: right">
           <img src="img/colors.png" width="490px">
@@ -372,7 +401,7 @@ class MyApp {
           <div col>
             <h3>v1 Animations</h3>
             <p>Mix of CSS and JS</p>
-            <p>CSS animations are quite limiting</p>
+            <p>CSS animations limited</p>
             <p>Difficult to interact with</p>
           </div>
           <pre col><code class="stylus">
@@ -384,8 +413,7 @@ class MyApp {
 
 .entering-view.active {
   transform: translate3d(...);
-}
-          </code></pre>
+}</code></pre>
         </div>
       </section>
 
@@ -409,13 +437,14 @@ class MyApp {
         <div flex>
           <div col>
             <h3>v2 Animations</h3>
+            <p>Extend and add animations</p>
             <p>Interactive control</p>
-            <p>Easy to customize</p>
-            <p>Extend and add new animations</p>
-            <p>[stats]</p>
+            <p>Thin wrapper to WAPI</p>
           </div>
-          <div col center>
-            [swipe to go back demo]
+          <div col demo>
+            <div class="demo-ios">
+              <iframe src="/demos/ionic-conference-app/www/index.html?ionicplatform=ios"></iframe>
+            </div>
           </div>
         </div>
       </section>
@@ -424,7 +453,7 @@ class MyApp {
         <div flex>
           <div col>
             <h3>Highly Configurable</h3>
-            <p>Almost everything has a config</p>
+            <p>~ Everything has a config</p>
             <p>Global config</p>
             <p>Platform config</p>
             <p>Attribute config</p>
@@ -471,8 +500,8 @@ class MyApp {
             <h3>Native Power</h3>
             <p>Batteries included</p>
             <p>Brought straight into Ionic</p>
-            <p>Even easier to get native access</p>
-            <p>Work with both Cordova and browsers</p>
+            <p>Easier to get native access</p>
+            <p>GPS, Bluetooth, Camera, etc.</p>
           </div>
           <div col center>
             <img src="img/plugins.png">
@@ -484,7 +513,7 @@ class MyApp {
         <div flex>
           <div col>
             <h3>Ionic CLI</h3>
-            <p>ES6/Typescript Transpilation</p>
+            <p>ES6/Typescript transpilation</p>
             <p>Sass compiling</p>
             <p>Cordova builds</p>
             <p>Webpack bundling</p>
@@ -500,30 +529,43 @@ class MyApp {
       <section>
         <div flex>
           <div col>
-            <h3>Want to try it out now?</h3>
-            <p>We want your feedback</p>
-            <p style="font-size:42px; text-decoration:underline;margin-top:36px;color:"><code><a href="http://ionic.io/2">ionic.io/2</a></code></p>
+            <h3>Huge Community!</h3>
+            <p>2M+ forum page views/mo.</p>
+            <p>105 Meetups worldwide</p>
+            <p>3,000+ active Slack members</p>
+            <p>4,000+ Ionic apps created every day</p>
+          </div>
+          <div col center>
+            <img src="img/community.png">
           </div>
         </div>
       </section>
 
       <section>
-        <h3>Huge Community!</h3>
-        <p>2M+ page views per month on our forum</p>
-        <p>105 Ionic Meetup Groups around the world</p>
-        <p>3,000+ active members in our Slack channel</p>
-        <p>4,000+ new Ionic apps created every day</p>
+        <div flex>
+          <div col>
+            <h3>Want to try it out now?</h3>
+            <p>We want your feedback</p>
+            <p><code><a href="http://ionic.io/2" style="font-size:48px; text-decoration:underline;margin-top:36px;color:#4e8ef7;">ionic.io/2</a></code></p>
+          </div>
+          <div col center>
+            <img src="img/tryit.png">
+          </div>
+        </div>
       </section>
 
       <section>
         <h3>What's Next!</h3>
         <p>Alpha released today!</p>
+        <p>Web Worker Support</p>
         <p>Staying 'Nsync with Angular2</p>
+        <p>Add even more to ionic.io services</p>
       </section>
 
       <section>
         <h3><code style="font-size: 80px">&lt;/html&gt;</code></h3>
         <p><a href="https://twitter.com/adamdbradley" target="_blank">@adamdbradley</a></p>
+        <p style="margin-top:40px;">adamdbradley.github.io/building-with-ionic2<p>
       </section>
 
     </div>
@@ -549,16 +591,6 @@ class MyApp {
 
       // Optional reveal.js plugins
       dependencies: [{
-        src: 'plugin/markdown/marked.js',
-        condition: function() {
-          return !!document.querySelector('[data-markdown]');
-        }
-      }, {
-        src: 'plugin/markdown/markdown.js',
-        condition: function() {
-          return !!document.querySelector('[data-markdown]');
-        }
-      }, {
         src: 'plugin/highlight/highlight.js',
         async: true,
         condition: function() {
