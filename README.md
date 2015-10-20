@@ -7,4 +7,4 @@ The Ionic and Angular teams have been working in parallel to extend Ionic’s pe
 
 #### Made with &#9829;
 - [@adamdbradley](https://twitter.com/adamdbradley)
-- [@ionicframework](https://twitter.com/ionicframework)
+- [@ionicframework](https://twitter.com/ionicframework) 
