@@ -1,0 +1,24 @@
+
+<ion-navbar *navbar>
+  <ion-title>About</ion-title>
+</ion-navbar>
+
+<ion-content>
+  <div class="about-header">
+    <img src="img/ionic-logo-white.svg">
+  </div>
+  <div padding class="about-info">
+    <h4>{{conferenceInfo.name}}</h4>
+
+    <div>
+      <icon calendar></icon>
+      <date-format [value]="conferenceInfo.start" format="MMM D, YYYY"></date-format>
+    </div>
+    <div>
+      <icon pin></icon>
+      <span>{{conferenceInfo.location}}</span>
+    </div>
+
+    <p>{{conferenceInfo.about}}</p>
+  </div>
+</ion-content>

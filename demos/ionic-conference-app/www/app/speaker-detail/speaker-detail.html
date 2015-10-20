@@ -1,0 +1,22 @@
+
+<ion-navbar *navbar>
+  <ion-title>Speaker Detail</ion-title>
+</ion-navbar>
+
+<ion-content padding>
+  <div class="speaker-detail">
+    <img src="{{speaker.profile_pic}}">
+    <ion-item>
+      <h1>{{speaker.name}}</h1>
+      <a item-right href="{{speaker.twitter}}"><icon ion-social-twitter></icon></a>
+    </ion-item>
+    <p>{{speaker.about}}</p>
+  </div>
+  <div *ng-if="speaker.sessions">
+    <h4>{{speaker.name}}'s Sessions</h4>
+    <div *ng-for="#session of speaker.sessions">
+      <h5><a href="#" (click)="openSession(session)">{{session.name}}</a></h5>
+      <p>{{session.description}}</p>
+    </div>
+  </div>
+</ion-content>
